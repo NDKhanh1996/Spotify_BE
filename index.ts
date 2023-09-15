@@ -9,7 +9,7 @@ import songRouter from "./src/routers/songRouter/songRouter";
 import sseRouter from "./src/routers/sseRouter";
 
 const app = express();
-const PORT = 8000
+const port = process.env.PORT || 8000;
 
 app.use(cors({origin: true, credentials: true}));
 app.use(bodyParser.json());
@@ -26,6 +26,6 @@ app.use('/auth', authRouter);
 app.use('/user', userRouter);
 app.use('/song', songRouter);
 
-app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
 });
