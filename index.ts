@@ -7,6 +7,7 @@ import authRouter from "./src/routers/authRouter/authRouter";
 import userRouter from "./src/routers/userRouter/userRouter";
 import songRouter from "./src/routers/songRouter/songRouter";
 import sseRouter from "./src/routers/sseRouter";
+import * as process from "process";
 
 const app = express();
 const port = process.env.PORT || 8000;
