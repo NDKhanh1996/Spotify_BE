@@ -1,4 +1,5 @@
 import * as mongoose from "mongoose";
+import * as process from "process";
 
 class DatabaseConnect {
     static async connectDB() {
