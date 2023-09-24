@@ -31,7 +31,7 @@ export class SongController {
 
     static async searchSongPublic(req: any, res: any) {
         try {
-            const songName = req.query.songName;
+            const songName = req.query.search;
             if (songName) {
                 const foundSongs = await Songs.find({
                     songName: {$regex: new RegExp(songName, 'i')},
